@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="ClinicaMed-PU" transaction-type="RESOURCE_LOCAL">
+        <!--<jta-data-source>SpitalPrivat</jta-data-source>-->
+        <class>ro.telacad.clinicamed.entity.Appointments</class>
+        <class>ro.telacad.clinicamed.entity.MapPatientsDoctor</class>
+        <class>ro.telacad.clinicamed.entity.MedicalSpeciality</class>
+        <class>ro.telacad.clinicamed.entity.Patients</class>
+        <class>ro.telacad.clinicamed.entity.ProgramJob</class>
+        <class>ro.telacad.clinicamed.entity.Role</class>
+        <class>ro.telacad.clinicamed.entity.TypeConsultation</class>
+        <class>ro.telacad.clinicamed.entity.Users</class>
+        <class>ro.telacad.clinicamed.entity.UsersLogin</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/spital_privat_database"/>
+            <property name="javax.persistence.jdbc.user" value="user"/>
+            <property name="javax.persistence.jdbc.password" value="12345"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <!--<property name="hibernate.archive.autodetection" value="class"/>  
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.use_outer_join" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.transaction.flush_before_completion" value="true" />    
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>-->  
+        </properties>
+    </persistence-unit>
+</persistence>
